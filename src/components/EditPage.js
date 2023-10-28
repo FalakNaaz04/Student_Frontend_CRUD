@@ -29,7 +29,10 @@ function EditPage() {
   }, [obj1.id]);
 
   const handleSubmit = () => {
-    const url = "http://localhost:5500/students/update-student/" + obj1.id;
+    // const url = "http://localhost:5500/students/update-student/" + obj1.id;
+    const url =
+      "https://student-database-1l8x.onrender.com/students/update-student/" +
+      obj1.id;
     const newData = { name, email, password };
     axios
       .put(url, newData)
